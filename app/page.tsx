@@ -4,6 +4,7 @@ import { fadeIn } from '@/utils/motion';
 import Image from "next/image";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { useRouter } from 'next/navigation'; // Добавлен импорт useRouter
 
 const services = [
   {
@@ -52,27 +53,38 @@ const ServiceCard = ({
   title: string;
   description: string;
   index: number;
-}) => (
-  <motion.div
-    variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    className="bg-green-600 rounded-[50px] p-[40px] flex justify-between items-center lg:flex-col lg:gap-[20px]"
-  >
-    <div className="flex flex-col gap-[20px]">
-      <h3 className="text-[36px] text-white font-semibold leading-[175%] tracking-[-1.8px]">
-        {title}
-      </h3>
-      <p className="text-[16px] text-white font-light leading-[175%] tracking-[-0.8px] max-w-[523px]">
-        {description}
-      </p>
-    </div>
-    <button className="text-[16px] text-green-600 font-semibold bg-white rounded-[50px] px-[40px] py-[16px] hover:bg-gray-100 transition">
-      Подробнее
-    </button>
-  </motion.div>
-);
+}) => {
+  const router = useRouter(); // Используем useRouter для навигации
+
+  const handleDetailsClick = () => {
+    router.push('/prices'); // Переход на страницу /prices
+  };
+
+  return (
+    <motion.div
+      variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="bg-green-600 rounded-[50px] p-[40px] flex justify-between items-center lg:flex-col lg:gap-[20px]"
+    >
+      <div className="flex flex-col gap-[20px]">
+        <h3 className="text-[36px] text-white font-semibold leading-[175%] tracking-[-1.8px]">
+          {title}
+        </h3>
+        <p className="text-[16px] text-white font-light leading-[175%] tracking-[-0.8px] max-w-[523px]">
+          {description}
+        </p>
+      </div>
+      <button 
+        onClick={handleDetailsClick} // Добавляем обработчик клика
+        className="text-[16px] text-green-600 font-semibold bg-white rounded-[50px] px-[40px] py-[16px] hover:bg-gray-100 transition"
+      >
+        Подробнее
+      </button>
+    </motion.div>
+  );
+};
 
 const FeatureItem = ({
   image,
