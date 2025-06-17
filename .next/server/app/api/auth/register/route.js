@@ -19,7 +19,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 9703:
+/***/ 6486:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -95,7 +95,7 @@ async function POST(req) {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fauth%2Fregister%2Froute&name=app%2Fapi%2Fauth%2Fregister%2Froute&pagePath=private-next-app-dir%2Fapi%2Fauth%2Fregister%2Froute.ts&appDir=C%3A%5CUsers%5CTwert%5CDesktop%5Cservice-plus%5Capp&appPaths=%2Fapi%2Fauth%2Fregister%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fauth%2Fregister%2Froute&name=app%2Fapi%2Fauth%2Fregister%2Froute&pagePath=private-next-app-dir%2Fapi%2Fauth%2Fregister%2Froute.ts&appDir=C%3A%5CUsers%5CTwert%5CDesktop%5Cservice-plus%5Capp&appPaths=%2Fapi%2Fauth%2Fregister%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -103,7 +103,7 @@ async function POST(req) {
 
     
 
-    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/auth/register/route","pathname":"/api/auth/register","filename":"route","bundlePath":"app/api/auth/register/route"},"resolvedPagePath":"C:\\Users\\Twert\\Desktop\\service-plus\\app\\api\\auth\\register\\route.ts","nextConfigOutput":"export"}
+    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/auth/register/route","pathname":"/api/auth/register","filename":"route","bundlePath":"app/api/auth/register/route"},"resolvedPagePath":"C:\\Users\\Twert\\Desktop\\service-plus\\app\\api\\auth\\register\\route.ts","nextConfigOutput":""}
     const routeModule = new (module_default())({
       ...options,
       userland: route_namespaceObject,
@@ -153,7 +153,7 @@ if (false) {}
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [212,778,600], () => (__webpack_exec__(9703)));
+var __webpack_exports__ = __webpack_require__.X(0, [212,778,600], () => (__webpack_exec__(6486)));
 module.exports = __webpack_exports__;
 
 })();

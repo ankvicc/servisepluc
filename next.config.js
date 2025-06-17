@@ -1,10 +1,9 @@
-module.exports = { reactStrictMode: true };
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",  // Генерирует статические файлы
   images: {
-    unoptimized: true,  // Отключает оптимизацию изображений (иначе ошибки)
+    unoptimized: true, // Отключает оптимизацию изображений
   },
-};
+  trailingSlash: true, // Добавляет слеши в URLs
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

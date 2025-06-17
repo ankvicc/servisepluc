@@ -3866,12 +3866,7 @@ function urlToUrlWithoutFlightMarker(url) {
     const urlWithoutFlightParameters = new URL(url, location.origin);
     urlWithoutFlightParameters.searchParams.delete(_approuterheaders.NEXT_RSC_UNION_QUERY);
     if (true) {
-        if ( true && urlWithoutFlightParameters.pathname.endsWith(".txt")) {
-            const { pathname } = urlWithoutFlightParameters;
-            const length = pathname.endsWith("/index.txt") ? 10 : 4;
-            // Slice off `/index.txt` or `.txt` from the end of the pathname
-            urlWithoutFlightParameters.pathname = pathname.slice(0, -length);
-        }
+        if (false) {}
     }
     return urlWithoutFlightParameters;
 }
@@ -6111,13 +6106,7 @@ async function fetchServerResponse(url, flightRouterState, nextUrl, currentBuild
     try {
         let fetchUrl = new URL(url);
         if (true) {
-            if (true) {
-                if (fetchUrl.pathname.endsWith("/")) {
-                    fetchUrl.pathname += "index.txt";
-                } else {
-                    fetchUrl.pathname += ".txt";
-                }
-            }
+            if (false) {}
         }
         // Add unique cache query to avoid caching conflicts on CDN which don't respect to Vary header
         fetchUrl.searchParams.set(_approuterheaders.NEXT_RSC_UNION_QUERY, uniqueCacheQuery);
@@ -6131,11 +6120,7 @@ async function fetchServerResponse(url, flightRouterState, nextUrl, currentBuild
         const contentType = res.headers.get("content-type") || "";
         let isFlightResponse = contentType === _approuterheaders.RSC_CONTENT_TYPE_HEADER;
         if (true) {
-            if (true) {
-                if (!isFlightResponse) {
-                    isFlightResponse = contentType.startsWith("text/plain");
-                }
-            }
+            if (false) {}
         }
         // If fetch returns something different than flight response handle it like a mpa navigation
         // If the fetch was not 200, we also handle it like a mpa navigation
@@ -8468,7 +8453,15 @@ const normalizePathTrailingSlash = (path)=>{
         return path;
     }
     const { pathname, query, hash } = (0, _parsepath.parsePath)(path);
-    if (false) {}
+    if (true) {
+        if (/\.[^/]+\/?$/.test(pathname)) {
+            return "" + (0, _removetrailingslash.removeTrailingSlash)(pathname) + query + hash;
+        } else if (pathname.endsWith("/")) {
+            return "" + pathname + query + hash;
+        } else {
+            return pathname + "/" + query + hash;
+        }
+    }
     return "" + (0, _removetrailingslash.removeTrailingSlash)(pathname) + query + hash;
 };
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {

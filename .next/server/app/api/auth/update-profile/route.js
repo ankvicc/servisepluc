@@ -12,7 +12,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 8561:
+/***/ 7312:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -73,7 +73,7 @@ async function POST(request) {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fauth%2Fupdate-profile%2Froute&name=app%2Fapi%2Fauth%2Fupdate-profile%2Froute&pagePath=private-next-app-dir%2Fapi%2Fauth%2Fupdate-profile%2Froute.ts&appDir=C%3A%5CUsers%5CTwert%5CDesktop%5Cservice-plus%5Capp&appPaths=%2Fapi%2Fauth%2Fupdate-profile%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fauth%2Fupdate-profile%2Froute&name=app%2Fapi%2Fauth%2Fupdate-profile%2Froute&pagePath=private-next-app-dir%2Fapi%2Fauth%2Fupdate-profile%2Froute.ts&appDir=C%3A%5CUsers%5CTwert%5CDesktop%5Cservice-plus%5Capp&appPaths=%2Fapi%2Fauth%2Fupdate-profile%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -81,7 +81,7 @@ async function POST(request) {
 
     
 
-    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/auth/update-profile/route","pathname":"/api/auth/update-profile","filename":"route","bundlePath":"app/api/auth/update-profile/route"},"resolvedPagePath":"C:\\Users\\Twert\\Desktop\\service-plus\\app\\api\\auth\\update-profile\\route.ts","nextConfigOutput":"export"}
+    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/auth/update-profile/route","pathname":"/api/auth/update-profile","filename":"route","bundlePath":"app/api/auth/update-profile/route"},"resolvedPagePath":"C:\\Users\\Twert\\Desktop\\service-plus\\app\\api\\auth\\update-profile\\route.ts","nextConfigOutput":""}
     const routeModule = new (module_default())({
       ...options,
       userland: route_namespaceObject,
@@ -131,7 +131,7 @@ if (false) {}
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [212,778], () => (__webpack_exec__(8561)));
+var __webpack_exports__ = __webpack_require__.X(0, [212,778], () => (__webpack_exec__(7312)));
 module.exports = __webpack_exports__;
 
 })();
