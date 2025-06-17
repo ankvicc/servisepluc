@@ -1,5 +1,7 @@
-// app/api/auth/login/route.ts
-import prisma  from '@/lib/prisma';
+export const dynamic = 'force-dynamic'; // Отключает статическую сборку
+export const fetchCache = 'force-no-store'; // Отключает кэширование
+
+import prisma from '@/lib/prisma';
 import { compare } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { NextResponse } from 'next/server';

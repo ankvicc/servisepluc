@@ -1,5 +1,8 @@
+export const dynamic = 'force-dynamic'; // Важно для API роутов
+export const fetchCache = 'force-no-store'; // Отключает кэширование
+
 import { NextResponse } from 'next/server';
-import prisma  from '@/lib/prisma';
+import prisma from '@/lib/prisma';
 
 export async function POST(request: Request) {
   try {

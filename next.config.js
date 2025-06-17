@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
-    unoptimized: true, // Отключает оптимизацию изображений
+    unoptimized: true,
   },
-  trailingSlash: true, // Добавляет слеши в URLs
-}
+  experimental: {
+    outputFileTracingExcludes: {
+      '/api/*': ['./node_modules/**/*'],
+    },
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

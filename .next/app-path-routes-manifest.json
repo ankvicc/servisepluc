@@ -6,8 +6,8 @@
   "/profile/page": "/profile",
   "/sales/page": "/sales",
   "/services/page": "/services",
-  "/api/auth/login/route": "/api/auth/login",
+  "/api/auth/logout/route": "/api/auth/logout",
   "/api/auth/register/route": "/api/auth/register",
   "/api/auth/update-profile/route": "/api/auth/update-profile",
-  "/api/auth/logout/route": "/api/auth/logout"
+  "/api/auth/login/route": "/api/auth/login"
 }

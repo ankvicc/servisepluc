@@ -6,8 +6,8 @@
   "/profile/page": "app/profile/page.js",
   "/sales/page": "app/sales/page.js",
   "/services/page": "app/services/page.js",
-  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/auth/logout/route": "app/api/auth/logout/route.js",
   "/api/auth/register/route": "app/api/auth/register/route.js",
   "/api/auth/update-profile/route": "app/api/auth/update-profile/route.js",
-  "/api/auth/logout/route": "app/api/auth/logout/route.js"
+  "/api/auth/login/route": "app/api/auth/login/route.js"
 }

@@ -1,5 +1,8 @@
+export const dynamic = 'force-dynamic'; // Важно для API роутов
+export const fetchCache = 'force-no-store'; // Отключает кэширование
+
 import { NextResponse } from 'next/server';
-import prisma  from '@/lib/prisma';
+import prisma from '@/lib/prisma';
 import { hash } from 'bcryptjs';
 
 export async function POST(req: Request) {
@@ -31,6 +34,7 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (error) {
+    console.error('Registration error:', error);
     return NextResponse.json(
       { error: 'Ошибка при регистрации' },
       { status: 500 }

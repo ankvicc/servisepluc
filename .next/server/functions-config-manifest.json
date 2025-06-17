@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/auth/login": {},
+    "/api/auth/update-profile": {},
+    "/api/auth/register": {}
+  }
+}

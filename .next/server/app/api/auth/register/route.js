@@ -40,7 +40,9 @@ __webpack_require__.d(__webpack_exports__, {
 var route_namespaceObject = {};
 __webpack_require__.r(route_namespaceObject);
 __webpack_require__.d(route_namespaceObject, {
-  POST: () => (POST)
+  POST: () => (POST),
+  dynamic: () => (dynamic),
+  fetchCache: () => (fetchCache)
 });
 
 // EXTERNAL MODULE: ./node_modules/next/dist/server/node-polyfill-headers.js
@@ -55,6 +57,8 @@ var prisma = __webpack_require__(7846);
 // EXTERNAL MODULE: ./node_modules/bcryptjs/index.js
 var bcryptjs = __webpack_require__(3600);
 ;// CONCATENATED MODULE: ./app/api/auth/register/route.ts
+const dynamic = "force-dynamic"; // Важно для API роутов
+const fetchCache = "force-no-store"; // Отключает кэширование
 
 
 
@@ -87,6 +91,7 @@ async function POST(req) {
             status: 201
         });
     } catch (error) {
+        console.error("Registration error:", error);
         return next_response/* default */.Z.json({
             error: "Ошибка при регистрации"
         }, {
