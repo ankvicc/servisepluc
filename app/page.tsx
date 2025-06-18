@@ -26,7 +26,7 @@ const services = [
 
 const features = [
   {
-    image: "/images/gala.png",
+    image: "/images/Gala.png",
     title: "Качество и гарантия",
     description:
       "Мы гарантируем высокое качество всех наших услуг. Наши мастера — профессионалы с большим опытом.",
