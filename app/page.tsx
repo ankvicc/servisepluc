@@ -54,10 +54,10 @@ const ServiceCard = ({
   description: string;
   index: number;
 }) => {
-  const router = useRouter(); // Используем useRouter для навигации
+  const router = useRouter();
 
   const handleDetailsClick = () => {
-    router.push('/prices'); // Переход на страницу /prices
+    router.push('/prices');
   };
 
   return (
@@ -66,19 +66,19 @@ const ServiceCard = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="bg-green-600 rounded-[50px] p-[40px] flex justify-between items-center lg:flex-col lg:gap-[20px]"
+      className="bg-green-600 rounded-[50px] p-6 md:p-[40px] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 lg:flex-col lg:gap-5"
     >
-      <div className="flex flex-col gap-[20px]">
-        <h3 className="text-[36px] text-white font-semibold leading-[175%] tracking-[-1.8px]">
+      <div className="flex flex-col gap-4 md:gap-5 w-full">
+        <h3 className="text-2xl md:text-[36px] text-white font-semibold leading-tight md:leading-[175%] tracking-tight md:tracking-[-1.8px]">
           {title}
         </h3>
-        <p className="text-[16px] text-white font-light leading-[175%] tracking-[-0.8px] max-w-[523px]">
+        <p className="text-sm md:text-[16px] text-white font-light leading-normal md:leading-[175%] tracking-tight md:tracking-[-0.8px]">
           {description}
         </p>
       </div>
       <button 
-        onClick={handleDetailsClick} // Добавляем обработчик клика
-        className="text-[16px] text-green-600 font-semibold bg-white rounded-[50px] px-[40px] py-[16px] hover:bg-gray-100 transition"
+        onClick={handleDetailsClick}
+        className="w-full md:w-auto text-sm md:text-[16px] text-green-600 font-semibold bg-white rounded-[50px] px-6 py-3 md:px-[40px] md:py-[16px] hover:bg-gray-100 transition whitespace-nowrap"
       >
         Подробнее
       </button>
@@ -214,40 +214,39 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col justify-center items-center text-center gap-[20px] px-[20px] pt-[100px] pb-[60px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
-      >
-        <motion.h1
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-[64px] text-black font-bold leading-[100%] tracking-[-3.2px] max-w-[950px] bg-white/70 p-4 rounded-xl"
-        >
-          Сервисный центр по ремонту и обслуживанию техники
-        </motion.h1>
-        <motion.p
-          initial={{ y: 50 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[20px] text-black font-light leading-[150%] tracking-[-1px] max-w-[700px] bg-white/70 p-4 rounded-xl"
-        >
-          Надежный партнер для ремонта и обслуживания техники. Профессионально.
-          Быстро. Качественно.
-        </motion.p>
-        <motion.a
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          href="#contact"
-          className="bg-green-600 text-white font-semibold text-[20px] rounded-[50px] px-[60px] py-[20px] hover:bg-green-700 transition"
-        >
-          Оставить заявку
-        </motion.a>
-      </motion.section>
+<motion.section
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="flex flex-col justify-center items-center text-center gap-4 md:gap-5 px-4 md:px-6 pt-16 md:pt-[100px] pb-12 md:pb-[60px] bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/hero.jpg')" }}
+>
+  <motion.h1
+    initial={{ y: -50 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] text-black font-bold leading-tight tracking-tight md:tracking-[-1.5px] lg:tracking-[-2px] xl:tracking-[-3.2px] max-w-[90%] md:max-w-[80%] lg:max-w-[950px] bg-white/70 p-4 md:p-6 rounded-xl"
+  >
+    Сервисный центр по ремонту и обслуживанию техники
+  </motion.h1>
+  <motion.p
+    initial={{ y: 50 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="text-sm sm:text-base md:text-lg lg:text-[20px] text-black font-light leading-normal tracking-tight md:tracking-[-0.5px] lg:tracking-[-1px] max-w-[90%] md:max-w-[70%] lg:max-w-[700px] bg-white/70 p-3 md:p-4 rounded-xl"
+  >
+    Надежный партнер для ремонта и обслуживания техники. Профессионально. Быстро. Качественно.
+  </motion.p>
+  <motion.a
+    initial={{ scale: 0.8 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
+    href="#contact"
+    className="text-sm sm:text-base md:text-lg lg:text-[20px] bg-green-600 text-white font-semibold rounded-[50px] px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-3 lg:px-[60px] lg:py-[20px] hover:bg-green-700 transition"
+  >
+    Оставить заявку
+  </motion.a>
+</motion.section>
 
       {/* Services */}
       <section className="flex flex-col items-center gap-[60px] px-[20px] py-[80px] bg-white">
@@ -260,16 +259,16 @@ export default function Home() {
         >
           Наши услуги
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[40px]">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              index={index}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-[40px]">
+  {services.map((service, index) => (
+    <ServiceCard
+      key={index}
+      index={index}
+      title={service.title}
+      description={service.description}
+    />
+  ))}
+</div>
       </section>
 
       {/* Features */}

@@ -114,65 +114,74 @@ const PrivacyItem = ({
   index: number;
 }) => (
   <motion.div
-    variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
+    variants={{
+      hidden: { y: 20, opacity: 0 },
+      show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          stiffness: 100,
+          damping: 10,
+          delay: Math.min(index * 0.03, 0.2),
+          duration: 0.25
+        }
+      }
+    }}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true }}
-    className="flex flex-col gap-[20px] bg-white p-8 rounded-[20px] shadow-lg"
+    viewport={{ once: true, margin: "0px 0px -100px 0px", amount: 0.1 }}
+    className="flex flex-col gap-4 bg-white p-6 rounded-xl shadow-md"
   >
-    <h3 className="text-[24px] text-green-600 font-semibold leading-[150%] tracking-[-1.2px]">
-      {title}
-    </h3>
-    <div className="text-[16px] text-black font-light leading-[175%] tracking-[-0.8px] space-y-3">
-      {content}
-    </div>
+    <h3 className="text-xl text-green-600 font-semibold">{title}</h3>
+    <div className="text-sm text-black font-light space-y-3">{content}</div>
   </motion.div>
 );
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-[#F3F3F3] min-h-screen">
+    <main className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col justify-center items-center text-center gap-[20px] px-[20px] pt-[100px] pb-[60px] bg-cover bg-center"
+        transition={{ duration: 0.5 }} // Ускоренная анимация
+        className="flex flex-col justify-center items-center text-center gap-4 px-4 pt-20 pb-12 md:pt-28 md:pb-16 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <motion.h1
-          initial={{ y: -50 }}
+          initial={{ y: -30 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-[48px] text-black font-bold leading-[100%] tracking-[-2.4px] max-w-[950px] bg-white/70 p-4 rounded-xl"
+          transition={{ duration: 0.4 }} // Ускоренная анимация
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-bold bg-white/70 p-4 rounded-xl max-w-[90%] md:max-w-[80%]"
         >
           Политика конфиденциальности
         </motion.h1>
         <motion.p
-          initial={{ y: 50 }}
+          initial={{ y: 30 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[20px] text-black font-light leading-[150%] tracking-[-1px] max-w-[700px] bg-white/70 p-4 rounded-xl"
+          transition={{ duration: 0.4, delay: 0.1 }} // Ускоренная анимация
+          className="text-base md:text-lg text-black font-light bg-white/70 p-3 md:p-4 rounded-xl max-w-[90%] md:max-w-[70%]"
         >
           Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей веб-сайта
         </motion.p>
       </motion.section>
 
       {/* Privacy Policy Content */}
-      <section className="flex flex-col items-center gap-[40px] px-[20px] py-[80px] max-w-[1200px] mx-auto">
+      <section className="flex flex-col items-center gap-8 px-4 py-12 md:py-16 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }} // Ускоренная анимация
           viewport={{ once: true }}
-          className="w-full bg-white p-8 rounded-[20px] shadow-lg"
+          className="w-full bg-white p-5 md:p-8 rounded-xl shadow-md"
         >
-          <p className="text-[18px] text-black font-light leading-[175%] tracking-[-0.9px] mb-4">
+          <p className="text-base md:text-lg text-black font-light mb-4">
             Настоящая Политика конфиденциальности (далее — Политика) определяет порядок обработки и защиты персональных данных пользователей веб-сайта [указать доменное имя] (далее — Сайт), принадлежащего компании «СервисПлюс» (далее — Оператор).
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-[40px] w-full">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 w-full">
           {privacyPolicySections.map((section, index) => (
             <PrivacyItem
               key={index}
@@ -186,20 +195,20 @@ export default function PrivacyPage() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }} // Ускоренная анимация
           viewport={{ once: true }}
-          className="w-full bg-white p-8 rounded-[20px] shadow-lg"
+          className="w-full bg-white p-5 md:p-8 rounded-xl shadow-md"
         >
-          <h3 className="text-[24px] text-green-600 font-semibold leading-[150%] tracking-[-1.2px] mb-4">
+          <h3 className="text-xl md:text-2xl text-green-600 font-semibold mb-4">
             12. Контактная информация
           </h3>
-          <div className="text-[16px] text-black font-light leading-[175%] tracking-[-0.8px] space-y-3">
+          <div className="text-sm md:text-base text-black font-light space-y-3">
             <p>Если у вас возникли вопросы по обработке персональных данных, пожалуйста, свяжитесь с нами:</p>
             <p>ООО «СервисПлюс»</p>
             <p>Адрес: г. Москва, ул. Примерная, д. 10</p>
             <p>Тел.: +7 (999) 123-45-67</p>
             <p>Email: info@serviceplus.ru</p>
-            <p className="text-[14px] text-black/60 font-light leading-[175%] tracking-[-0.7px] mt-4">
+            <p className="text-xs md:text-sm text-black/60 font-light mt-4">
               Дата последнего обновления: {new Date().toLocaleDateString('ru-RU')}
             </p>
           </div>

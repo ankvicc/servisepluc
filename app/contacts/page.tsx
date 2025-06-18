@@ -20,11 +20,11 @@ const Contacts = () => {
             <ul className="space-y-4 text-white text-base">
               <li className="flex items-start">
                 <span className="mr-3">📍</span>
-                <span>г. Москва, ул. Примерная, д. 10</span>
+                <span>г. Батайск, ул. Северный массив, д. 8</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-3">📞</span>
-                <span>+7 (999) 123-45-67</span>
+                <span>+7 (988) 566-36-35</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-3">✉️</span>

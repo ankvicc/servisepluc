@@ -34,8 +34,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Контакты</h3>
             <address className="text-sm text-gray-400 not-italic">
-              г. Москва, ул. Примерная, д. 10<br />
-              +7 (999) 123-45-67<br />
+              г. Батайск, ул. Северный массив, д. 8<br />
+              +7 (988) 566-36-35<br />
               info@serviceplus.ru
             </address>
           </div>

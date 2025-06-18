@@ -26,3 +26,19 @@
 .shadow-card:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
+
+/* Плавная прокрутка для якорных ссылок */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Отступ для фиксированного навбара */
+main {
+  min-height: calc(100vh - 4rem);
+}
+
+@media (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 5rem);
+  }
+}
