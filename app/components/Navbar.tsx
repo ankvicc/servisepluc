@@ -38,7 +38,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: NavbarProps) => {
     <header className="bg-white shadow-sm fixed w-full z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold text-green-600">
-          СервисЦентр
+          СервисПлюс
         </Link>
 
         <div className="flex items-center gap-6">
